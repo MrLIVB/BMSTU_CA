@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Моя страница</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Добавить машину</h1>
+        
+            <p>Тип машины</p>
+            <input id="car-type" type="text" spellcheck="false" autocomplete="off">
+        
+            <p>Стоимость</p>
+            <input id="car-cost" type="number" spellcheck="false" autocomplete="off">
+        
+            <br>
+            <br>
+        
+            <button onclick="addCar()">Сохранить машину</button>
+        
+            <br>
+            <br>
+        
+            <h2 id="result-label"></h2>
+        </div>
+
+        <div class="content">
+            <h1>Получить стоимость машины</h1>
+        
+            <p>Тип машины</p>
+            <input id="car-type2" type="text" spellcheck="false" autocomplete="off">
+        
+            <br>
+            <br>
+        
+            <button onclick="getCar()">Получить стоимость машины</button>
+        
+            <br>
+            <br>
+        
+            <h2 id="result-label2"></h2>
+        </div>
+
+        <div class="content">
+            <h1>Добавить склад</h1>
+        
+            <p>Название склада</p>
+            <input id="whouse-name" type="text" spellcheck="false" autocomplete="off">
+        
+            <p>Список машин</p>
+            <input id="whouse-cars" type="text" spellcheck="false" autocomplete="off", placeholder="Названия машин">
+            <p>Вводятся через запятую</p>
+        
+            <br>
+            <br>
+        
+            <button onclick="addWarehouse()">Сохранить склад</button>
+        
+            <br>
+            <br>
+        
+            <h2 id="result-label3"></h2>
+        </div>
+
+        <div class="content">
+            <h1>Получить информацию о складе</h1>
+        
+            <p>Название склада</p>
+            <input id="whouse-name2" type="text" spellcheck="false" autocomplete="off">        
+            <br>
+            <br>
+        
+            <button onclick="getWarehouse()">Получить информацию о складе</button>
+        
+            <br>
+            <br>
+        
+            <h2 id="result-label4"></h2>
+        </div>
+    </div>
+    <script src="/code.js"></script>
+</body>
+
+</html>
