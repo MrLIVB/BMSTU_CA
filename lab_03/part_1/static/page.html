@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление пользователя</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Добавление пользователя</h1>
+
+    <p>Почта</p>
+    <input id="post" type="text" spellcheck="false" autocomplete="off">
+
+    <p>Фамилия</p>
+    <input id="surname" type="text" spellcheck="false" autocomplete="off">
+    
+    <p>Номер телефона</p>
+    <input id="phone" type="text" spellcheck="false" autocomplete="off">
+    <br>
+    <br>
+
+    <button onclick="makeAction()" class="btn-class">Отправить</button>
+
+    <script>
+                "use strict";
+
+                    function ajaxPost(urlString, bodyString, callback) {
+                        let r = new XMLHttpRequest();
+                        r.open("POST", urlString, true);
+                        r.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                        r.send(bodyString);
+                        r.onload = function () {
+                            callback(r.response);
+                        }
+                    }
+
+                    function makeAction() {
+                        const a = document.getElementById("post").value
+                        const b = document.getElementById("surname").value
+                        const c = document.getElementById("phone").value
+
+                        ajaxPost("/save/info", JSON.stringify({
+                            a, b, c
+                        }), function (answerString) {
+                            const answerObject = JSON.parse(answerString);
+                            const result = answerObject.result;
+                            alert(result);
+                        });
+                    }
+    </script>
+</body>
+</html>

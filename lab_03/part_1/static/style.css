@@ -1,0 +1,13 @@
+body {
+    padding: 30px;
+    background: rgb(110, 219, 219);
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.btn-class {
+    padding: 6px;
+    background: blueviolet;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}

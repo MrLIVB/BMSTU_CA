@@ -1,0 +1,22 @@
+{
+  "name": "lab_02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lab_02_01_01.js",
+  "scripts": {
+    "task_1_1": "node lab_02_01_01.js",
+    "task_1_2": "node lab_02_01_02.js",
+    "task_1_3": "node lab_02_01_03.js",
+    "task_1_4": "node lab_02_01_04.js",
+    "task_1_5": "node lab_02_01_05.js",
+    "task_1_6": "task1\node lab_02_01_06.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "readline-sync": "^1.4.10"
+  }
+}

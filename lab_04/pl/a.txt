@@ -1,0 +1,13 @@
+% Student exercise profile
+:- set_prolog_flag(occurs_check, error).        % disallow cyclic terms
+:- set_prolog_stack(global, limit(8 000 000)).  % limit term space (8Mb)
+:- set_prolog_stack(local,  limit(2 000 000)).  % limit environment space
+
+% Your program goes here
+
+ok.
+input(A, B) :- read(A), read(B); ok.
+fibonacci(X1, X2, A, B) :- X1 >= A, X1 =< B, write(X1), nl, T is (X1+X2), fibonacci(X2, T, A, B); 
+    X1 =< B, T is (X1+X2), fibonacci(X2, T, A, B);
+    ok.
+f :- input(A, B), fibonacci(1, 1, A, B) ; ok.
